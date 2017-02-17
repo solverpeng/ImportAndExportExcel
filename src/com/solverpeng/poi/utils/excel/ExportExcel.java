@@ -114,9 +114,6 @@ public class ExportExcel {
                         if (objectArr[1] instanceof Field) {
                             val = Reflections.invokeGetter(e, ((Field) objectArr[1]).getName());
                         }
-                        /*if (objectArr[1] instanceof Method) {
-                            val = Reflections.invokeMethod(e, ((Method) objectArr[1]).getName(), new Class[]{}, new Object[]{});
-                        }*/
                     }
                 } catch (Exception ex) {
                     log.info(ex.toString());
