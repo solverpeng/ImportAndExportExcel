@@ -5,17 +5,17 @@ Java 环境下 Excel 的导入导出
 ## HSSFWorkbook
 Excel 97-2003，即 HSSFWorkbook 只需要导入：
 `
-poi-3.9-20121203.jar
-log4j-1.2.13.jar
+poi-3.9-20121203.jar/
+log4j-1.2.13.jar/
 slf4j-api-1.6.1.jar
 `
 
 ## XSSFWorkbook
 Excel > 2003，即 XSSFWorkbook 还需要导入：
 `
-poi-ooxml-3.9-20121203.jar 
-poi-ooxml-schemas-3.9-20121203.jar
-xmlbeans-2.3.0.jar
+poi-ooxml-3.9-20121203.jar/
+poi-ooxml-schemas-3.9-20121203.jar/
+xmlbeans-2.3.0.jar/
 dom4j-1.6.1.jar
 `
 
@@ -35,6 +35,7 @@ dom4j-1.6.1.jar
 ## ExportExcelUtil API
 只通过三个重载的构造器向外提供了3个接口，最完整的一个构造器方法签名为：
 `com.solverpeng.poi.utils.excel.ExportExcelUtil.downLoad4Excel(java.lang.String, java.util.List<java.lang.String>, java.util.List<java.lang.Object[]>, java.lang.String, int, java.lang.String, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)`
+
 方法体为内容分为：
 1. 获取样式
 2. 设置标题
@@ -82,7 +83,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 sort字段：按 DESC 进行的排序，即值越大，则对应的表头越靠后。
 groups字段：针对同一实体的不同字段导出，在 `ExportExcel` 可以传入。
 ### 使用
-可以参见：com.solverpeng.poi.servlet.PoiServlet.doPost 方法的各个测试，以及对应实体 `com.solverpeng.poi.beans.User` 使用的注解。
+可以参见：`com.solverpeng.poi.servlet.PoiServlet.doPost` 方法的各个测试，以及对应实体 `com.solverpeng.poi.beans.User` 使用的注解。
 
 # 导入
 ## ImportExcel API
